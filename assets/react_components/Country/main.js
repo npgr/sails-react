@@ -4,9 +4,10 @@ import React from "react"
 import ReactDOM from "react-dom"
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
-//import Layout from './Layout';
+
+
+import store from './CountryStore';
 //import About from './About';
 //import Dashboard from './Dashboard';
 
@@ -70,6 +71,13 @@ class Layout extends React.Component {
 }
 
 class List extends React.Component {
+	constructor(props) {
+		super()
+
+		store.init()
+		console.log('getFields: ', store.getFields())
+	}
+	
 	render() {
 		return(
 			<div>
