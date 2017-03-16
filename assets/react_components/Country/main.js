@@ -8,6 +8,9 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 
 import store from './CountryStore';
+import List from './List'
+import Add from './Add'
+
 //import About from './About';
 //import Dashboard from './Dashboard';
 
@@ -65,34 +68,6 @@ class Layout extends React.Component {
 		return(
 			<div>
 				{AppNavbar}
-			</div>
-		)
-	}
-}
-
-class List extends React.Component {
-	constructor(props) {
-		super()
-
-		store.init()
-		//console.log('getFields: ', store.getFields())
-		console.log('Schema: ',  Global_Schema)
-	}
-	
-	render() {
-		return(
-			<div>
-				Componente Lista de Items
-			</div>
-		)
-	}
-}
-
-class Add extends React.Component {
-	render() {
-		return(
-			<div>
-				Add Country
 			</div>
 		)
 	}
