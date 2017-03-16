@@ -9,23 +9,26 @@ module.exports = {
 
   attributes: {
 	//migrate: "alter",
-  	//_card_width: '60em',
-	//_btn_left: '30px',
-	//_ga: 'enabled',
+  	//_card_width: "60em",
+	//_btn_left: "30px",
+	//_ga: "enabled",
 	id: {
-		//description: 'id',
+		//description: "id",
+		//order: 1,
 		type: "integer",
 		primaryKey: true,
 		unique: true,
 		autoIncrement: true
 	},
 	code: {
-		//description: 'Code',
-		type: 'string'
+		//description: "Code",
+		//order: 2,
+		type: "string"
 	},
 	name: {
-		//description: 'Name',
-		type: 'string',
+		//description: "Name",
+		//order: 3,
+		type: "string",
 		required: true
 	}
 	//End Attributes

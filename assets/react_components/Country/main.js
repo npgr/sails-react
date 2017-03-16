@@ -75,7 +75,8 @@ class List extends React.Component {
 		super()
 
 		store.init()
-		console.log('getFields: ', store.getFields())
+		//console.log('getFields: ', store.getFields())
+		console.log('Schema: ',  Global_Schema)
 	}
 	
 	render() {
