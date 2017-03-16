@@ -5,7 +5,6 @@ export default class TableLine extends React.Component {
 
 	render() {
 		var idx = Number(this.props.idx)
-		console.log('rendering line ',this.props.idx)
 		var tableLine = [  ]
 		
 		tableLine.push(<td>ops</td>)
