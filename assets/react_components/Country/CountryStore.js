@@ -5,27 +5,41 @@ class CountryStore {
 	fields = []
 	
 	init() {
-		//console.log('Global Data: ', Global_Data)
-		if (Global_Data.length > 0)
-			this.fields = Object.keys(Global_Data[0])
+		Global_Schema.createdAt = {
+			order: 200,
+			description: 'Created At',
+			type: 'timestamp with time zone'
+		}
+		
+		Global_Schema.updatedAt = {
+			order: 210,
+			description: 'Updated At',
+			type: 'timestamp with time zone'
+		}
 		
 		for (var i=0; i<Global_Data.length; i++)
 			this.data.push(Global_Data[i])
 		Global_Data = []
-		//console.log('this.data8: ', this.data[0])
+		this.setFields()
 	}
 	
 	set(theData) {
 		this.data = theData
 	}
 	
-	getFields() {
-		return this.fields
+	setFields() {
+		var allFields = Object.keys(Global_Schema)
+		for (var i=0; i < allFields.length; i++)
+		{
+			if (!!Global_Schema[allFields[i]].type) {
+				var obj = Global_Schema[allFields[i]]
+				obj.name = allFields[i]
+				this.fields.push(obj)
+			}
+		}	
 	}
 }
 
 var store = new CountryStore
-
-//Global_Data = []
 
 export default store
