@@ -15,7 +15,7 @@ module.exports = {
 				mdl = mdl.replace('//End Attributes','').replace(/\/\//g,'')
 				var obj = Hjson.parse(mdl);
 				//res.locals.schema = Country.schema
-				res.locals.schema = obj
+				res.locals.schema = obj.attributes
 				res.locals.data = data
 				//res.locals.data = JSON.stringify(data)
 				res.view("Country/list")
