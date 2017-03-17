@@ -14,17 +14,17 @@ export default class List extends React.Component {
 	render() {
 
 		var tableHead = ([
-					<th id="th_ops" class="ops"></th>
+					<th key='-1' id="th_ops" className="ops"></th>
 		])
 		for (var i=0; i < store.fields.length; i++)
-			tableHead.push(<th>{store.fields[i].description}</th>)
+			tableHead.push(<th key={i}>{store.fields[i].description}</th>)
 		
 		var tableBody = [  ]
 		for (var i=0; i < store.data.length; i++)
-			tableBody.push(<TableLine idx={i} />)
+			tableBody.push(<TableLine key={i} idx={i} />)
 		
 		return(
-			<table id="data_table" class="table_list" style={{width:'100%'}}>
+			<table id="data_table" className="table_list" style={{width:'100%'}}>
 			  <thead>
 				<tr>{tableHead}</tr>
 			  </thead>

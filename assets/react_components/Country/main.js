@@ -6,6 +6,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
+//import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory'
 
 import store from './CountryStore';
 import List from './List'
@@ -45,8 +48,8 @@ class Layout extends React.Component {
 			<Navbar.Collapse>
 			  <Nav>
 				<NavDropdown eventKey={1} title="Country" id="basic-nav-dropdown">
-				  <MenuItem eventKey={1.1} onClick={goPage} id="./">List</MenuItem>
-				  <MenuItem eventKey={1.1} onClick={goPage} id="add">Add</MenuItem>
+				  <MenuItem eventKey={1.1} onClick={goPage} id="/country/list">List</MenuItem>
+				  <MenuItem eventKey={1.1} onClick={goPage} id="/country/list/add">Add</MenuItem>
 				  <MenuItem eventKey={1.3} href="Portugal.html">Portugal</MenuItem>
 				  <MenuItem divider />
 				  <MenuItem eventKey={1.4} href="world.html">World</MenuItem>
@@ -60,7 +63,7 @@ class Layout extends React.Component {
 				</NavDropdown>
 			  </Nav>
 			  <Nav pullRight>
-				<NavItem eventKey={5} onClick={goPage} id="about">About</NavItem>
+				<NavItem eventKey={5} onClick={goPage} id="/country/list/about">About</NavItem>
 			  </Nav>
 			</Navbar.Collapse>
 		  </Navbar>
@@ -82,10 +85,6 @@ class About extends React.Component {
 		)
 	}
 }
-
-//import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory'
 
 const history = createBrowserHistory()
 

@@ -5,6 +5,7 @@ class CountryStore {
 	fields = []
 	
 	init() {
+		console.log('CountryStore.Init()')
 		Global_Schema.createdAt = {
 			order: 200,
 			description: 'Created At',
@@ -28,6 +29,7 @@ class CountryStore {
 	}
 	
 	setFields() {
+		this.fields = []
 		var allFields = Object.keys(Global_Schema)
 		for (var i=0; i < allFields.length; i++)
 		{

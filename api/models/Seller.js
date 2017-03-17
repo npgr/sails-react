@@ -7,36 +7,36 @@
 
 module.exports = {
 
-  //migrate: 'alter',
+  //migrate: "alter",
   attributes: {
-	//_title: 'Seller',
-	//_card_width: '65em',
-	//_btn_left: '35px',
-	//_ga: 'enabled',
+	//_title: "Seller",
+	//_card_width: "65em",
+	//_btn_left: "35px",
+	//_ga: "enabled",
 	id: {
-		//description: 'id',
+		//description: "id",
 		type: "integer",
 		primaryKey: true,
 		unique: true,
 		autoIncrement: true
 	},
 	code: {
-		//description: 'Code',
-		type: 'string'
+		//description: "Code",
+		type: "string"
 	},
 	name: {
-		//description: 'Name',
-		type: 'string',
+		//description: "Name",
+		type: "string",
 		required: true
 	},
 	salesregion: {
-		//description: 'Sales Region',
-		type: 'string',
+		//description: "Sales Region",
+		type: "string",
 		required: true
 	},
 	user: {
-		//description: 'User',
-		type: 'string',
+		//description: "User",
+		type: "string",
 		required: true
 	}
 //End Attributes
