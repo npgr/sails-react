@@ -38,7 +38,7 @@ class Layout extends React.Component {
 		const { goPage } = this
 		
 		const AppNavbar = (
-		  <Navbar inverse collapseOnSelect>
+		  <Navbar collapseOnSelect>
 			<Navbar.Header>
 			  <Navbar.Brand>
 				<div onClick={goPage} id="/" >SAILS-REACT5</div>

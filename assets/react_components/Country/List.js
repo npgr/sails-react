@@ -1,6 +1,7 @@
 import React from 'react';
 import store from './CountryStore'
 import TableLine from './TableLine'
+import { Button } from 'react-bootstrap'
 
 export default class List extends React.Component {
 	constructor(props) {
@@ -24,6 +25,9 @@ export default class List extends React.Component {
 			tableBody.push(<TableLine key={i} idx={i} />)
 		
 		return(
+		     <div>
+		     <h4>Countries</h4>
+			<Button bsStyle="success">+ Add Country</Button>
 			<table id="data_table" className="table_list" style={{width:'100%'}}>
 			  <thead>
 				<tr>{tableHead}</tr>
@@ -32,6 +36,7 @@ export default class List extends React.Component {
 				{ tableBody }
 			  </tbody>
 			</table>
+		    </div>
 		)
 	}
 }
